@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Beer Store</title>
+
+    <!-- Javascript files-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/collapse.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/formValidation.js"></script>
+
+    <!-- Stylesheets -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    
+
+
+</head>
+<body>
+
+    <header>
+        <!--MAYBE A MENU HERE-->
+            <h1>Brazilian Beer Store</h1>
+    </header>
+    <hr />
+
+    <main>
+
+        <div class="container">
+            <h1 id="greeting">Welcome to Beer Store!</h1>
+            <h2>Here you can find a variety of great beers! Check our catalogue.</h2><br />
+            <h3>Please, choose the quantity of each beer, fill out the shipping information, and click on submit.</h3>
+            <h3>Insert &quot;0&quot; if you do not want that specific beer.</h3>
+        </div>
+			<form id="cart" onsubmit="return ValidateForm()" action="validation.php"  method="post">
+				<div class="container">
+
+					<div>
+						<!-- <!-- start row 01 -->
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							</ol>
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img class="img-responsive center-block" src="img/carbeer1.jpg" alt=" Slide One " width="800px" >
+									<div class="carousel-caption">
+										<h2>The best beer selection</h2>
+									</div>
+								</div>
+								<div class="item">
+									<img class="img-responsive center-block" src="img/carbeer2.jpg" alt=" Slide Two " width="800px" >
+									<div class="carousel-caption">
+										<h2>Craft beers </h2>
+									</div>
+								</div>
+								<div class="item">
+									<img class="img-responsive center-block" src="img/carbeer3.jpg" alt=" Slide Three " width="800px" >
+									<div class="carousel-caption">
+										<h2>The greatests wheat beers</h2>
+									</div>
+								</div>
+							</div>
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div><!-- end row01 -->
+					<br /><br />
+
+					<div id="thumbnailRow">
+						<!-- start row 02 -->
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img class="img-rounded" src="img/beer1.jpg" alt="Chimay Triple Ale" width="100px">
+								<div class="caption">
+									<h3>Chimay Triple Ale</h3>
+									<p>This blonde ale is dry and floral with a slight hop bitterness. The hoppiest Chimay ale, Cinq Cents was created by famed brewmaster Father Theodore in 1966.</p>
+									<h4>$4.95</h4>
+									<p>Please choose the quantity:</p> <input type="number" name="chimay" id="chimay" value="0" size="2" /> 
+								</div>
+							</div>
+						</div><!-- end thumbnail 01 -->
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img class="img-rounded" src="img/beer2.jpg" alt="Waterloo Triple Blond" width="115px">
+								<div class="caption">
+									<h3>Waterloo Triple Blond</h3>
+									<p>Recognised in 1815 for giving "Strength" and "Courage" during the battle of Waterloo, its triple-fermentation old-style brewing gives this beer a powerful, spicy taste.</p>
+									<h4>$3.95</h4>
+									<p>Please choose the quantity:</p><input type="number" name="waterlootb" id="waterloo" value="0" size="2" /> 
+								</div>
+							</div>
+						</div> <!-- end thumbnail 02 -->
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img class="img-rounded" src="img/beer3.jpg" alt=" Duvel Belgian Blonde" width="108px">
+								<div class="caption">
+									<h3>Duvel Belgian Blonde</h3>
+									<p>Duvel is a natural beer with a subtle bitterness, and a distinctive hop character. The unique brewing process, guarantees a pure character, and a pleasant sweet taste of alcohol. </p>
+									<h4>$3.45</h4>
+									<p>Please choose the quantity:</p> <input type="number" name="duvel" id="duvel" value="0" size="2" /> 
+								</div>
+							</div>
+						</div> <!-- end thumbnail 03 -->
+
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img class="img-rounded" src="img/beer4.jpg" alt=" Ayinger Weizen-Bock" width="220px">
+								<div class="caption">
+									<h3>Ayinger Weizen-Bock</h3>
+									<p>Brewed as a powerful and strong wheat ale, this pours a pale golden colour with an amazing thick creamy foam. The nose is filled with aromas of sweet malt, bananas, lemon and a sprinkle of clove.</p>
+									<h4>$4.45</h4>
+									<p>Please choose the quantity:</p><input type="number" name="ayinger" id="ayinger" value="0" size="2" /> 
+								</div>
+							</div>
+						</div> <!-- end thumbnail 04 -->
+						
+					<br /><br /><br />
+					
+					<div>
+						
+
+						
+						<fieldset>
+							<legend>Shipping data:</legend>
+							<p>All form fields are required.</p>
+							<label for="firstName">First name:</label><br />
+							<input type="text" name="fname" id="fname" onblur="TrimString(this)"  class="forms"><br />
+							<label for="lastName">Last name:</label><br />
+							<input type="text" name="lname" id="lname" onblur="TrimString(this)" class="forms"><br />
+							<label for="address">Address:</label><br />
+							<input type="text" name="address" id="address" onblur="TrimString(this)"class="forms"><br />
+							<label for="city">Your City:</label><br />
+							<input type="text" name="city" id="city" onblur="TrimString(this)"class="forms"><br />
+							<br />
+							<label for="province">Province:</label><br />
+							<select name="province" size="1">
+								<optgroup label="Select your province">
+									<option value="britishColumbia">British Columbia</option>
+									<option value="ontario">Ontario</option>
+									<option value="quebec">Quebec</option>
+									<option value="alberta">Alberta</option>
+									<option value="novaScotia">Nova Scotia</option>
+									<option value="newfoundland">Newfoundland</option>
+									<option value="saskatchewan">Saskatchewan</option>
+									<option value="manitoba">Manitoba</option>
+									<option value="newBrunswick">New Brunswick</option>
+									<option value="princeEdwardIsland">Prince Edward Island</option>
+								</optgroup>
+							</select>
+							<br /><br />
+							<label for="pcode">Postal Code:</label> <br />
+							<input type="text" name="pcode" id="pcode" placeholder="ex: M2M 2M2" onblur="TrimString(this)" class="forms"><br />
+							<label for="phone">Phone Number:</label><br />
+							<input type="text" name="phone" id="phone" placeholder="ex: 888 888 8888" onblur="TrimString(this)" class="forms"><br />
+							<label for="email">Type your Email:</label><br />
+							<input type="text" name="email" id="email" onblur="TrimString(this)" class="forms">
+							
+
+							<!-- Allow form submission with keyboard without duplicating the dialog button -->
+							<!--<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">-->
+							<br /><br /><br />
+						</fieldset>
+						<input id="button" type="reset" value="Reset" class="buttons">
+						<input id="button" type="submit" value="Submit" class="buttons">
+						<br />
+						<span id="errormessage"></span>
+
+					</div>
+				</div>	
+			</form>    
+
+            <hr><br />
+
+        </div>
+    </main>
+
+    <footer>
+
+        <p>Copyright&copy; Brazil Beer Store Ltda</p>
+
+    </footer>
+
+</body>
+
+
+
+</html>
